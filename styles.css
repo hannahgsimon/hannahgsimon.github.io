@@ -1,0 +1,370 @@
+body {
+  background-color: #f1e9dc;
+  margin: 10px 40px;
+  font-family: "Source Sans Pro", system-ui, sans-serif;
+  font-size: 12pt;
+}
+
+.page-wrapper {
+  margin: 10px 40px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+}
+
+h1 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+h2 {
+  display: block;
+  width: fit-content;
+  padding: 2px 12px;
+  margin-top: 40px;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  font-size: 30px;
+  background-color: #f8f8f8;
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#pfp {
+  width: 25vw;
+  height: 25vw;
+  max-width: 200px;
+  max-height: 200px;
+  border: 4px solid #f2aa84;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+#mission-image {
+  width: 250px;
+  float: left;
+  margin-right: 20px;
+}
+
+main {
+  font-size: 13pt;
+}
+
+hr {
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-top: medium double black;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 0;
+}
+
+hr:after {
+  content: "🖳";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: #f1e9dc;
+}
+
+.figure {
+  margin-left: 24px;
+}
+
+.figure img {
+  height: 150px;
+}
+
+.caption {
+  font-size: 11pt;
+}
+
+.ABRCMSImage img {
+  border: 4px solid #20208f;
+  border-radius: 10px;
+  margin-right: 2%;
+  height: 150px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact a {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact img {
+  width: 40px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact img:hover {
+  filter: invert(35%) sepia(75%) saturate(500%) hue-rotate(200deg);
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .contact a {
+    flex: 1 1 100%;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  text-align: center;
+  background-color: #20208f;
+  color: white;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("https://www.afcea.org/sites/default/files/styles/wide/public/media/images/migrated/shutterstock_587427896_crop.jpg?itok=A--SvWBn")
+    no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero img {
+  width: 15vw;
+  max-width: 180px;
+  min-width: 100px;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+  p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+  .hero img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: #20208f;
+  color: white;
+}
+
+.brand img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f2aa84;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mission section responsive layout */
+.mission-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#mission-image {
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.mission-text {
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .mission-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #mission-image {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.skills-container {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+}
+
+.skill img {
+  width: 80px;
+  height: auto;
+}
+
+.skill p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Large Screens: 4 Columns (One Row) */
+@media (min-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Medium Screens: 2 Columns (Two Rows) */
+@media (max-width: 1023px) and (min-width: 600px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Screens: 1 Column (Four Rows) */
+@media (max-width: 599px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  color: red;
+  font-weight: bold;
+}
+
+.carousel-item img {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+  color: black;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adds a semi-transparent dark background */
+  border-radius: 50%; /* Makes the background circular */
+  padding: 10px; /* Adds padding for better visibility */
+}
