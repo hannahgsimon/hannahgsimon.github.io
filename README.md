@@ -1,1 +1,8 @@
-**Note:** This is an older project and needs updating. Information isn't current. I’m leaving it here for reference for now.
+## Portfolio Website
+
+Personal portfolio website built to showcase projects, skills, and experience.
+
+Tech Stack:
+- HTML
+- CSS
+- JavaScript
